@@ -1,0 +1,105 @@
+#include<iostream>
+#include<cmath>
+float a1, b1, c1;
+float resultados;
+float leer_vector(float& v1, float& v2, float& v3) {
+  std::cout << "Ingrese las componentes del vector (separadas por espacios): "<<std::endl;
+  std::cin >> v1 >> v2 >> v3;
+  return 0; 
+}
+float leer_vector2(float& v4, float& v5, float& v6){
+  std::cout<<"Ingrese las componentes del segundo vector "<<std::endl;
+  std::cin>> v4>>v5>> v6;
+  return 0;  
+}
+float leer_vector3(float& v7, float& v8, float& v9){
+  std::cout<<"Ingrese las componentes del tercer vector "<<std::endl;
+  std::cin>> v7>>v8>> v9;
+  return 0;  
+}
+float suma(float v1, float v2, float v3, float v4, float v5, float v6){
+  a1=(v1+v4);
+  b1=(v2+v5);
+  c1=(v3+v6);
+  return 0;
+}
+float resta(float v1, float v2, float v3, float v4, float v5, float v6){
+  a1=(v1-v4);
+  b1=(v2-v5);
+  c1=(v3-v6);
+  return 0;
+}
+float producto(float v1, float v2, float v3, float v4){
+  a1=(v1*v4);
+  b1=(v2*v4);
+  c1=(v3*v4);
+  return 0; 
+}
+double producto_ext(double num1, double num2, double num3, double num4, double num5, double num6){ //la funcion suma recibe dos parametros tipo double num1, num2
+  a1=(num2*num6)-(num3*num5);
+  b1=((num3*num4)-(num1*num6));
+  c1=((num1*num5)-(num2*num4));
+  return 0;
+}
+double producto_int(double num1, double num2, double num3, double num4, double num5, double num6){ //la funcion suma recibe dos parametros tipo double num1, num2
+  resultados=((num1*num4)+(num2*num5)+(num3*num6));
+  return 0;
+}
+double producto_geo(double num1, double num2, double num3, double num4, double num5, double num6, double num7, double num8, double num9){ //la funcion suma recibe dos parametros tipo double num1, num2
+  producto_ext(num4,num5,num6,num7,num8,num9);
+  producto_int(num1,num2,num3,a1,b1,c1);
+  return 0;
+}
+
+
+int main() {
+  float x1,y1,z1, x2, y2, z2, x3, y3, z3;
+/////////////////////////Menu/////////////////////////77
+  int opcion;
+  std::cout<<"::::::::Operaciones con vectores::::::"<<std::endl;
+  std::cout<<":                                    :"<<std::endl;
+  std::cout<<": Seleccione una opcion              :"<<std::endl;
+  std::cout<<":                                    :"<<std::endl;
+  std::cout<<": 1.Suma de vectores                 :"<<std::endl;
+  std::cout<<": 2.Resta de vectores                :"<<std::endl;
+  std::cout<<": 3.Producto por escalar             :"<<std::endl;
+  std::cout<<": 4.Producto interno                 :"<<std::endl;
+  std::cout<<": 5.Producto externo                 :"<<std::endl;
+  std::cout<<": 6.Producto geometrico              :"<<std::endl;
+  std::cout<<":                                    :"<<std::endl;
+  std::cout<<": 0.Acerca de la calculadora         :"<<std::endl;
+  std::cout<<"::::::::::::::::::::::::::::::::::::::"<<std::endl;
+  std::cin>>opcion;    
+///////////////////Fin Menu///////////////////77
+  leer_vector(x1,y1,z1);
+  leer_vector2(x2,y2,z2);
+  if (opcion==1){
+    suma(x1,y1,z1, x2, y2, z2);
+    std::cout<<"La suma es: "<<a1<<b1<<c1<<std::endl;
+  }
+  if (opcion==2){
+    resta(x1,y1,z1, x2, y2, z2);
+    std::cout<<"La resta es: "<<a1<<b1<<c1<<std::endl;
+  }
+  if (opcion==3){
+    producto(x1,y1,z1,x2);
+    std::cout<<"El producto por escalar es :"<<a1<<b1<<c1<<std::endl;
+  }
+  if (opcion==4){
+    producto_int(x1,y1,z1,x2,y2,z2);
+    std::cout<<"El producto interior es: " <<resultados<< std::endl;
+  }
+  if (opcion==5){
+    producto_ext(x1,y1,z1,x2,y2,z2);
+    std::cout<<"El producto externo es: ( " <<a1<<","<<b1<<","<<c1<<" )"<< std::endl;
+  }
+  if (opcion==6){
+    leer_vector3(x3, y3, z3);
+    producto_geo(x1,y1,z1,x2,y2,z2,x3,y3,z3);
+    std::cout<<"El producto geometrico es: " <<resultados<< std::endl;
+  }
+  
+  return 0;
+}
+
+
