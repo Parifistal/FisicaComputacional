@@ -1,0 +1,1 @@
+plot 'Derivadas.dat' using 1:2 with line title 'Derivada Analitica', '' using 1:3 with line title 'Diferencias finitas hacia adelante', '' using 1:4 with line title 'Diferencias finitas hacia atras', '' using 1:5 with line title 'Diferencias finitas Centrales', 
