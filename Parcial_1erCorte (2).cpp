@@ -209,6 +209,6 @@ system("gnuplot Grafico_Trapecio_Radio_theta.gp");
 system("gnuplot Grafico_Cuadratura_Radio_theta.gp");
 system("gnuplot Grafico_Gauss_Radio_theta.gp");
 system("gnuplot Grafica_Analitica.gp");
-
+system("gnuplot Grafico_error_Radio_theta.gp");
 return 0;
 }
