@@ -1,0 +1,12 @@
+Para la primera grafica de dio un resultado, en la segundo se ve un error en la ecuacion, esto supondria yo que es por los valores iniciales, y por el paso, ya que probe a variar estos 
+valores y obtuve un acercamiento mayor a la grafica analitica
+
+Para la tercera si se nota una gran diferencia, supongo yo que es debido a el paso, ademas de que el codigo me genera valores y desde un momento determinado, se reinician 
+unos valores, como si volviera a empezar el bucle y grabarse
+
+para el cuarto y el quinto los valores se superponen, motivo por el cual no se puede apreciar el erro, esto lo comprobe revisando los valores obtenidos en el archivo .txt usado para el gnuplot.
+
+
+Como comentario final tomo que los errores obtenidos son a causa de los bucles, ya que en algunos momentos estos fallan y me reinician los valores, ademas de esto se encontro que
+el codigo presenta errores cuando se da valores negativos a las funciones pedidas, en esos instantes el programa suelta valores incoherentes con la aproximacion que se esta deseando
+realizar.
